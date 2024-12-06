@@ -15,17 +15,8 @@ import (
 
 	"github.com/crossplane/upjet/pkg/terraform"
 
-	"github.com/micgoe/provider-vra/apis/v1beta1"
+	"github.com/upbound/upjet-provider-template/apis/v1beta1"
 )
-
-const (
-	keyUrl = "url"
-	keyAccessToken = "access_token"
-	keyRefreshToken = "refresh_token"
-	keyInsecure = "insecure"
-	keyReauthorizeTimeout = "reauthorize_timeout"
-	keyApiTimeout = "api_timeout"
-  )
 
 const (
 	// error messages
@@ -33,7 +24,7 @@ const (
 	errGetProviderConfig    = "cannot get referenced ProviderConfig"
 	errTrackUsage           = "cannot track ProviderConfig usage"
 	errExtractCredentials   = "cannot extract credentials"
-	errUnmarshalCredentials = "cannot unmarshal vra credentials as JSON"
+	errUnmarshalCredentials = "cannot unmarshal template credentials as JSON"
 )
 
 // TerraformSetupBuilder builds Terraform a terraform.SetupFn function which
@@ -76,29 +67,6 @@ func TerraformSetupBuilder(version, providerSource, providerVersion string) terr
 			"username": creds["username"],
 			"password": creds["password"],
 		}*/
-
-
-        ps.Configuration = map[string]any{}
-		if v, ok := creds[keyUrl]; ok {
-		    ps.Configuration[keyUrl] = v
-		}
-		if v, ok := creds[keyAccessToken]; ok {
-			ps.Configuration[keyAccessToken] = v
-		}
-        if v, ok := creds[keyRefreshToken]; ok {
-            ps.Configuration[keyRefreshToken] = v
-                }
-        if v, ok := creds[keyInsecure]; ok {
-            ps.Configuration[keyInsecure] = v
-            }
-        if v, ok := creds[keyReauthorizeTimeout]; ok {
-            ps.Configuration[keyReauthorizeTimeout] = v
-            }
-        if v, ok := creds[keyApiTimeout]; ok {
-            ps.Configuration[keyApiTimeout] = v
-        }
-        
-
 		return ps, nil
 	}
 }
