@@ -1,4 +1,4 @@
-module github.com/upbound/upjet-provider-template
+module github.com/micgoe/provider-vra
 
 go 1.21
 
