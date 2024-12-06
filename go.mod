@@ -1,4 +1,4 @@
-module github.com/micgoe/provider-vmware-vra
+module github.com/micgoe/provider-vra
 
 go 1.21
 

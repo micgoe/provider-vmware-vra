@@ -15,7 +15,7 @@ import (
 
 	"github.com/crossplane/upjet/pkg/terraform"
 
-	"github.com/micgoe/provider-vmware-vra/apis/v1beta1"
+	"github.com/micgoe/provider-vra/apis/v1beta1"
 )
 
 const (

@@ -9,8 +9,8 @@ import (
 
 	"github.com/crossplane/upjet/pkg/controller"
 
-	resource "github.com/micgoe/provider-vmware-vra/internal/controller/null/resource"
-	providerconfig "github.com/micgoe/provider-vmware-vra/internal/controller/providerconfig"
+	resource "github.com/micgoe/provider-vra/internal/controller/null/resource"
+	providerconfig "github.com/micgoe/provider-vra/internal/controller/providerconfig"
 )
 
 // Setup creates all controllers with the supplied logger and adds them to

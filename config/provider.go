@@ -9,28 +9,13 @@ import (
 	_ "embed"
 
 	ujconfig "github.com/crossplane/upjet/pkg/config"
-	blockdevice "github.com/micgoe/provider-vmware-vra/config/block_device"
-	blueprint "github.com/micgoe/provider-vmware-vra/config/blueprint"
-	catalogitementitlement "github.com/micgoe/provider-vmware-vra/config/catalog_item"
-	catalogsource "github.com/micgoe/provider-vmware-vra/config/catalog_source"
-	cloudaccount "github.com/micgoe/provider-vmware-vra/config/cloud_account"
-	contentsource "github.com/micgoe/provider-vmware-vra/config/content_source"
-	deployment "github.com/micgoe/provider-vmware-vra/config/deployment"
-	fabric "github.com/micgoe/provider-vmware-vra/config/fabric"
-	flavorprofile "github.com/micgoe/provider-vmware-vra/config/flavor_profile"
-	imageprofile "github.com/micgoe/provider-vmware-vra/config/image_profile"
-	integration "github.com/micgoe/provider-vmware-vra/config/integration"
-	loadbalancer "github.com/micgoe/provider-vmware-vra/config/load_balancer"
-	machine "github.com/micgoe/provider-vmware-vra/config/machine"
-	network "github.com/micgoe/provider-vmware-vra/config/network"
-	project "github.com/micgoe/provider-vmware-vra/config/project"
-	storage "github.com/micgoe/provider-vmware-vra/config/storage"
-	zone "github.com/micgoe/provider-vmware-vra/config/zone"
+
+	"github.com/micgoe/provider-vra/config/null"
 )
 
 const (
 	resourcePrefix = "vra"
-	modulePath     = "github.com/micgoe/provider-vmware-vra"
+	modulePath     = "github.com/micgoe/provider-vra"
 )
 
 //go:embed schema.json
@@ -51,23 +36,7 @@ func GetProvider() *ujconfig.Provider {
 
 	for _, configure := range []func(provider *ujconfig.Provider){
 		// add custom config functions
-		project.Configure,
-		blueprint.Configure,
-		deployment.Configure,
-		fabric.Configure,
-		blockdevice.Configure,
-		flavorprofile.Configure,
-		imageprofile.Configure,
-		storage.Configure,
-		catalogsource.Configure,
-		catalogitementitlement.Configure,
-		cloudaccount.Configure,
-		contentsource.Configure,
-		integration.Configure,
-		loadbalancer.Configure,
-		machine.Configure,
-		network.Configure,
-		zone.Configure,
+		null.Configure,
 	} {
 		configure(pc)
 	}
