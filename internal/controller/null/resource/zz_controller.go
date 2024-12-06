@@ -21,8 +21,8 @@ import (
 	"github.com/pkg/errors"
 	ctrl "sigs.k8s.io/controller-runtime"
 
-	v1alpha1 "github.com/micgoe/provider-vra/apis/null/v1alpha1"
-	features "github.com/micgoe/provider-vra/internal/features"
+	v1alpha1 "github.com/micgoe/provider-vmware-vra/apis/null/v1alpha1"
+	features "github.com/micgoe/provider-vmware-vra/internal/features"
 )
 
 // Setup adds a controller that reconciles Resource managed resources.

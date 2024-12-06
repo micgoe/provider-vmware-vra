@@ -31,12 +31,12 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/log/zap"
 	"sigs.k8s.io/controller-runtime/pkg/metrics"
 
-	"github.com/micgoe/provider-vra/apis"
-	"github.com/micgoe/provider-vra/apis/v1alpha1"
-	"github.com/micgoe/provider-vra/config"
-	"github.com/micgoe/provider-vra/internal/clients"
-	"github.com/micgoe/provider-vra/internal/controller"
-	"github.com/micgoe/provider-vra/internal/features"
+	"github.com/micgoe/provider-vmware-vra/apis"
+	"github.com/micgoe/provider-vmware-vra/apis/v1alpha1"
+	"github.com/micgoe/provider-vmware-vra/config"
+	"github.com/micgoe/provider-vmware-vra/internal/clients"
+	"github.com/micgoe/provider-vmware-vra/internal/controller"
+	"github.com/micgoe/provider-vmware-vra/internal/features"
 )
 
 func main() {

@@ -11,7 +11,7 @@ import (
 
 	"github.com/crossplane/upjet/pkg/pipeline"
 
-	"github.com/micgoe/provider-vra/config"
+	"github.com/micgoe/provider-vmware-vra/config"
 )
 
 func main() {
