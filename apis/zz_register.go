@@ -10,17 +10,51 @@ package apis
 import (
 	"k8s.io/apimachinery/pkg/runtime"
 
-	v1alpha1 "github.com/upbound/upjet-provider-template/apis/null/v1alpha1"
-	v1alpha1apis "github.com/upbound/upjet-provider-template/apis/v1alpha1"
-	v1beta1 "github.com/upbound/upjet-provider-template/apis/v1beta1"
+	v1alpha1 "github.com/micgoe/provider-vmware-vra/apis/blockdevice/v1alpha1"
+	v1alpha1blueprint "github.com/micgoe/provider-vmware-vra/apis/blueprint/v1alpha1"
+	v1alpha1catalogitementitlement "github.com/micgoe/provider-vmware-vra/apis/catalogitementitlement/v1alpha1"
+	v1alpha1catalogsourceblueprint "github.com/micgoe/provider-vmware-vra/apis/catalogsourceblueprint/v1alpha1"
+	v1alpha1catalogsourceentitlement "github.com/micgoe/provider-vmware-vra/apis/catalogsourceentitlement/v1alpha1"
+	v1alpha1cloudaccount "github.com/micgoe/provider-vmware-vra/apis/cloudaccount/v1alpha1"
+	v1alpha1contentsource "github.com/micgoe/provider-vmware-vra/apis/contentsource/v1alpha1"
+	v1alpha1deployment "github.com/micgoe/provider-vmware-vra/apis/deployment/v1alpha1"
+	v1alpha1fabric "github.com/micgoe/provider-vmware-vra/apis/fabric/v1alpha1"
+	v1alpha1flavorprofile "github.com/micgoe/provider-vmware-vra/apis/flavorprofile/v1alpha1"
+	v1alpha1imageprofile "github.com/micgoe/provider-vmware-vra/apis/imageprofile/v1alpha1"
+	v1alpha1integration "github.com/micgoe/provider-vmware-vra/apis/integration/v1alpha1"
+	v1alpha1loadbalancer "github.com/micgoe/provider-vmware-vra/apis/loadbalancer/v1alpha1"
+	v1alpha1machine "github.com/micgoe/provider-vmware-vra/apis/machine/v1alpha1"
+	v1alpha1network "github.com/micgoe/provider-vmware-vra/apis/network/v1alpha1"
+	v1alpha1project "github.com/micgoe/provider-vmware-vra/apis/project/v1alpha1"
+	v1alpha1storage "github.com/micgoe/provider-vmware-vra/apis/storage/v1alpha1"
+	v1alpha1apis "github.com/micgoe/provider-vmware-vra/apis/v1alpha1"
+	v1beta1 "github.com/micgoe/provider-vmware-vra/apis/v1beta1"
+	v1alpha1zone "github.com/micgoe/provider-vmware-vra/apis/zone/v1alpha1"
 )
 
 func init() {
 	// Register the types with the Scheme so the components can map objects to GroupVersionKinds and back
 	AddToSchemes = append(AddToSchemes,
 		v1alpha1.SchemeBuilder.AddToScheme,
+		v1alpha1blueprint.SchemeBuilder.AddToScheme,
+		v1alpha1catalogitementitlement.SchemeBuilder.AddToScheme,
+		v1alpha1catalogsourceblueprint.SchemeBuilder.AddToScheme,
+		v1alpha1catalogsourceentitlement.SchemeBuilder.AddToScheme,
+		v1alpha1cloudaccount.SchemeBuilder.AddToScheme,
+		v1alpha1contentsource.SchemeBuilder.AddToScheme,
+		v1alpha1deployment.SchemeBuilder.AddToScheme,
+		v1alpha1fabric.SchemeBuilder.AddToScheme,
+		v1alpha1flavorprofile.SchemeBuilder.AddToScheme,
+		v1alpha1imageprofile.SchemeBuilder.AddToScheme,
+		v1alpha1integration.SchemeBuilder.AddToScheme,
+		v1alpha1loadbalancer.SchemeBuilder.AddToScheme,
+		v1alpha1machine.SchemeBuilder.AddToScheme,
+		v1alpha1network.SchemeBuilder.AddToScheme,
+		v1alpha1project.SchemeBuilder.AddToScheme,
+		v1alpha1storage.SchemeBuilder.AddToScheme,
 		v1alpha1apis.SchemeBuilder.AddToScheme,
 		v1beta1.SchemeBuilder.AddToScheme,
+		v1alpha1zone.SchemeBuilder.AddToScheme,
 	)
 }
 
