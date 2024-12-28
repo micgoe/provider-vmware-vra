@@ -75,7 +75,7 @@ IMAGES = $(PROJECT_NAME)
 XPKG_REG_ORGS ?= docker.io/goemic
 # NOTE(hasheddan): skip promoting on xpkg.upbound.io as channel tags are
 # inferred.
-XPKG_REG_ORGS_NO_PROMOTE ?= docker.io/goemic
+XPKG_REG_ORGS_NO_PROMOTE ?= xpkg.upbound.io/upbound
 XPKGS = $(PROJECT_NAME)
 -include build/makelib/xpkg.mk
 
